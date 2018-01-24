@@ -1,11 +1,16 @@
 <template>
   <div class="wrapper">
-    <side-bar type="sidebar" :sidebar-links="$sidebar.sidebarLinks">
+    <side-bar type="sidebar" :active-color="$sidebar.activeColor" :background-color="$sidebar.backgroundColor" :sidebar-links="$sidebar.sidebarLinks">
 
     </side-bar>
     <notifications>
 
     </notifications>
+
+    <sidebar-share>
+
+    </sidebar-share>
+
     <div class="main-panel">
       <top-navbar></top-navbar>
 
@@ -24,11 +29,13 @@
   import TopNavbar from './TopNavbar.vue'
   import ContentFooter from './ContentFooter.vue'
   import DashboardContent from './Content.vue'
+  import SidebarShare from './SidebarSharePlugin.vue'
   export default {
     components: {
       TopNavbar,
       ContentFooter,
-      DashboardContent
+      DashboardContent,
+      SidebarShare
     },
     methods: {
       toggleSidebar () {
